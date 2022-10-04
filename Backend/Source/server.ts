@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 const  corsOption = {
-    origin: ["http://localhost:3000/engagements/2021_0001/reviewnotes"]
+    origin: ["http://localhost:3000"]
 };
 
 app.listen(process.env.SERVER_PORT, async () => {
