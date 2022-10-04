@@ -9,6 +9,9 @@ dotenv express cors
 ### install modules
 npm install
 
+### run Backend
+npm run dev
+
 ## Dev packages
 
 @types/express @types/node nodemon ts-node typescript @types/cors
@@ -24,4 +27,4 @@ Project made via vue create command
 npm install
 
 ### Compiles and hot-reloads for development
-npm run server
+npm run serve
