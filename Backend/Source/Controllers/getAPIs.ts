@@ -7,5 +7,5 @@ export const getReviewNotes = async(req: Request, res: Response) => {
 };
 
 export const getUsers = async(req: Request, res: Response) => {
-    res.status(200).send(reviewnotes);
+    res.status(200).send(users);
 }
