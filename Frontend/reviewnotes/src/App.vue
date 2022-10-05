@@ -26,7 +26,7 @@
 import { defineComponent } from '@vue/composition-api';
 import BreadCrumbs from "./components/BreadCrumbs.vue";
 import NewNoteBtn from "./components/NewNoteBtn.vue";
-import DataTable from "./components/DataTable.vue";
+import DataTable from "./components/DataTable.vue"; 
 
 
 export default defineComponent({
