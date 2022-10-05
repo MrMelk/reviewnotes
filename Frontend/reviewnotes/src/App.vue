@@ -13,8 +13,9 @@
         </v-col>
       </v-row>
       </div>
+      <div class="centerDiv"><h1>Filters</h1></div>
       <div class="toolbar">
-        <h1>Filter bar</h1>
+        <ToolBar/>
       </div>
       <DataTable/>
 
@@ -26,7 +27,8 @@
 import { defineComponent } from '@vue/composition-api';
 import BreadCrumbs from "./components/BreadCrumbs.vue";
 import NewNoteBtn from "./components/NewNoteBtn.vue";
-import DataTable from "./components/DataTable.vue"; 
+import DataTable from "./components/DataTable.vue";
+import ToolBar from "./components/ToolBar.vue"; 
 
 
 export default defineComponent({
@@ -35,11 +37,11 @@ export default defineComponent({
   components: {
     BreadCrumbs,
     NewNoteBtn,
-    DataTable
+    DataTable,
+    ToolBar
 },
   data () {
     return {
-
     }
   },
 })

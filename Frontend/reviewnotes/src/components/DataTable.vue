@@ -54,8 +54,16 @@
     import { Note } from '@/types/Note';
     import { User } from '@/types/User';
     
+    
     export default defineComponent({
         name: "DataTable",
+
+        props: {
+          typeFilter: {
+            type: String
+          }
+        },
+
         components: {
             TableHeader,
         },
@@ -105,6 +113,7 @@
             loadMore(){
                 this.count += 3;
                 console.log(this.count);
+                console.log(this.typeFilter)
             }
         }
     })
