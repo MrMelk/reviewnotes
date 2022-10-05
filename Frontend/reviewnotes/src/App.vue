@@ -8,47 +8,40 @@
         <v-col>
         <h1 class="header">Review notes</h1>
         </v-col>
-      <v-col>
-        <button class="btn">New note</button>
-      </v-col>
+          <v-col>
+          <NewNoteBtn/>
+        </v-col>
       </v-row>
-      <div class="toolbar">
       </div>
-        <li v-for="note in notes" v-bind:key="note">
-          {{note}}
-        </li>
-     </div>
+      <div class="toolbar">
+        <h1>Filter bar</h1>
+      </div>
+      <DataTable/>
+
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
-import axios from "axios";
-import { defineComponent } from 'vue';
-import BreadCrumbs from "./components/BreadCrumbs.vue"
+import { defineComponent } from '@vue/composition-api';
+import BreadCrumbs from "./components/BreadCrumbs.vue";
+import NewNoteBtn from "./components/NewNoteBtn.vue";
+import DataTable from "./components/DataTable.vue";
 
 
 export default defineComponent({
   name: 'App',
-  test: "notes",
 
   components: {
-    BreadCrumbs
-  },
+    BreadCrumbs,
+    NewNoteBtn,
+    DataTable
+},
   data () {
     return {
-      notes: []
+
     }
   },
-  mounted() {
-    axios.get("http://localhost:5000/reviewnotes/").then((res) => {
-      this.notes = res.data;
-      console.log(res.data);
-    })
-  },
-  methods: {
-    
-  }
 })
 </script>
 
