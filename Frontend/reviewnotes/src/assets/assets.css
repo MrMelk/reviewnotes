@@ -14,3 +14,7 @@
 .toolbar {
     bottom: 20%
 }
+.tableDiv {
+  min-width: 1300px;
+  width: 100%
+}
