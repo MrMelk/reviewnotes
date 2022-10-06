@@ -2,28 +2,17 @@
 
 mockup of a reviewnotes page
 
-# Backend packages
-
-dotenv express cors
-
+# Backend Setup
+Go into Backend and follow instructions below in terminal
 ### install modules
 npm install
 
 ### run Backend
 npm run dev
 
-## Dev packages
-
-@types/express @types/node nodemon ts-node typescript @types/cors
-
-### install modules
-npm install -D @types/express @types/node nodemon ts-node typescript @types/cors
-
-
 # Frontend Setup
 Project made via vue create command.
-All content is within the Frontend/reviewnotes folder
-
+Go into Frontend/reviewnotes folder and follow instructions below
 
 ### install modules
 npm install
