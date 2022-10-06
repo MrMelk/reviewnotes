@@ -25,11 +25,37 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api';
+import { defineStore } from "pinia";
 import BreadCrumbs from "./components/BreadCrumbs.vue";
 import NewNoteBtn from "./components/NewNoteBtn.vue";
 import DataTable from "./components/DataTable.vue";
 import ToolBar from "./components/ToolBar.vue"; 
+import { ref } from 'vue';
 
+export const useTaskFilterStore = defineStore("typeFiltering", () => {
+  const typeFilter = ref("all")
+  
+  return {typeFilter}
+})
+
+export const usePriorityFilterStore = defineStore("priorityFiltering", () => {
+  const priorityFilter = ref("None")
+  
+  return {priorityFilter}
+})
+
+
+/*export const useFilterStore = defineStore("typeFiltering", {
+  state: () => {
+    filter: "all",
+  },
+  getters: {
+    getAll: (state) => "all",
+    getTasks: (state) => "tasks",
+    getNotes: (state) => "notes",
+  }
+  
+})*/
 
 export default defineComponent({
   name: 'App',
