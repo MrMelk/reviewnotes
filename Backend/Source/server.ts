@@ -23,8 +23,8 @@ app.use(function (req, res, next) {
 });
 
 
-app.listen(process.env.SERVER_PORT, async () => {
-    console.log(`listening at http:localhost:${process.env.SERVER_PORT}`);
+app.listen(5000, async () => {
+    console.log(`listening at http:localhost:5000`);
     
     return "done";
 })
