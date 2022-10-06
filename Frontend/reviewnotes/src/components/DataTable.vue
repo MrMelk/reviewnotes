@@ -26,12 +26,10 @@
           no assignees
           </v-col>
           <v-col v-else v-for="assignee in note.assignees" :key="assignee.$oid">
-            <img src="userImages[assignee.$oid]"/>
-            {{assignee.$oid}}
+            {{userNames[assignee.$oid]}}
           </v-col>
           <v-col>
-            <img src="userImages[note.reporterId.$oid]"/>
-            {{note.reporterId.$oid}}
+            {{userNames[note.reporterId.$oid]}}
           </v-col>
           <v-col>
             {{note.sectionRef}}
@@ -72,7 +70,7 @@
                 count: 3,
                 notes: [] as Note[],
                 users: [] as User[],
-                userImages: {}
+                userNames: {}
             }
         },
         computed: {
@@ -103,9 +101,9 @@
                 console.log(res.data);
                 let images: Record<string, string> = {}
                 for(let user of this.users){
-                    images[user.id] = user.photo
+                    images[user.id] = user.name
                 }
-                this.userImages = images;
+                this.userNames = images;
                 console.log(images["001"]);     
             });
         },
